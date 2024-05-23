@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Automezzo extends Model
 {
     use HasFactory;
-    
+
     protected $fillable = ['targa', 'marca', 'modello', 'filiale_id'];
 
     public function filiale()
