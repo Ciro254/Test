@@ -11,13 +11,8 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('automezzi', function (Blueprint $table) {
-            $table->id();
-            $table->string('targa')->unique();
-            $table->string('marca');
-            $table->string('modello');
-            $table->unsignedBigInteger('filiale_id');
-            $table->timestamps();
+        Schema::table('automezzi', function (Blueprint $table) {
+            $table->foreign('filiale_id')->references('id')->on('filiali')->onDelete('cascade');
         });
     }
 
@@ -26,7 +21,8 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('automezzi');
-
+        Schema::table('automezzi', function (Blueprint $table) {
+            $table->dropForeign(['filiale_id']);
+        });
     }
 };

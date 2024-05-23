@@ -13,6 +13,6 @@ class Automezzo extends Model
 
     public function filiale()
     {
-        return $this->belongsTo(Filiale::class, 'filiale_id', 'codice');
+        return $this->belongsTo(Filiale::class, 'filiale_id', 'id');
     }
 }

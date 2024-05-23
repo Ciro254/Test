@@ -13,6 +13,6 @@ class Filiale extends Model
 
     public function automezzi()
     {
-        return $this->hasMany(Automezzo::class, 'filiale_id', 'codice');
+        return $this->hasMany(Automezzo::class, 'filiale_id', 'id');
     }
 }
