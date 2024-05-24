@@ -11,7 +11,7 @@ class Automezzo extends Model
 
     protected $fillable = ['targa', 'marca', 'modello', 'filiale_id'];
 
-    public function filiale()
+    public function automezzi()
     {
         return $this->belongsTo(Filiale::class, 'filiale_id', 'id');
     }

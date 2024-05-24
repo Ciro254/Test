@@ -12,7 +12,7 @@ class FilialeController extends Controller
         return view('Filiali.index', compact('filiali'));
     }
 
-    public function show(Filiale $filiale)
+    public function show(Filiale $filiali)
     {
         return view('filiali.show', compact('filiale'));
     }
