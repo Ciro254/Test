@@ -14,5 +14,5 @@ Route::get('/filiali/{filiale}',[FilialeController::class, 'show'])->name('filia
 
 // Route Automezzi //
 
-Route::get('/automezzi', [AutomezzoController::class])->name('automezzi.index');
+Route::get('/automezzi', [AutomezzoController::class, 'index'])->name('automezzi.index');
 Route::get('/automezzi/{automezzo}',[AutomezzoController::class, 'show'])->name('automezzi.show');

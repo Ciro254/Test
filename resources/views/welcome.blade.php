@@ -11,19 +11,14 @@
 </head>
 
 <body>
-    <div class="container">
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="automezzi.index">Automezzi</a>
-                <a class="navbar-brand" href="filiali.index">Filiali</a>
-            </div>
-        </nav>
-    </div>
+    <nav>
+        <a href="{{ route('filiali.index') }}">Filiali</a>
+        <a href="{{ route('automezzi.index') }}">Automezzi</a>
+    </nav>
 
-    <h1>Lista delle Filiali</h1>
-<ul>
-   
-</ul>
+    <div class="container">
+        @yield('content')
+    </div>
 
 
 
