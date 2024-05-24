@@ -14,8 +14,8 @@
     <div class="container">
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">Automezzi</a>
-                <a class="navbar-brand" href="#">Filiali</a>
+                <a class="navbar-brand" href="filiali.index">Automezzi</a>
+                <a class="navbar-brand" href="automezzi.index">Filiali</a>
             </div>
         </nav>
     </div>
