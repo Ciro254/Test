@@ -9,6 +9,11 @@ class FilialeController extends Controller
     public function index()
     {
         $filiali = Filiale::all();
-        return view('filiali.index', compact('filiali'));
+        return view('Filiali.index', compact('filiali'));
+    }
+
+    public function show(Filiale $filiale)
+    {
+        return view('filiali.show', compact('filiale'));
     }
 }

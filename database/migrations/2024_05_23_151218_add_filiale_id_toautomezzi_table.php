@@ -12,6 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('automezzi', function (Blueprint $table) {
+    
             $table->foreign('filiale_id')->references('id')->on('filiali')->onDelete('cascade');
         });
     }

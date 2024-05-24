@@ -8,9 +8,11 @@ Route::get('/', function () {return view('welcome');});
 
 // Route Filiali //
 
-Route::get('/filiali', FilialeController::class)->name('Filiali.index');
+Route::get('/filiali', [FilialeController::class, 'index'])->name('Filiali.index');
+Route::get('/filiali/{filiale}',[FilialeController::class, 'show'])->name('Filiali.show');
 
 
 // Route Automezzi //
 
-Route::get('/automezzi', AutomezzoController::class)->name('Automezzi.index');
+Route::get('/automezzi', [AutomezzoController::class])->name('Automezzi.index');
+Route::get('/automezzi/{automezzo}',[AutomezzoController::class, 'show'])->name('Automezzo.show');
