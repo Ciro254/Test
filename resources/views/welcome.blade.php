@@ -15,19 +15,14 @@
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container-fluid">
                 <a class="navbar-brand" href="automezzi.index">Automezzi</a>
-                <a class="navbar-brand" href="Filiali.index">Filiali</a>
+                <a class="navbar-brand" href="filiali.index">Filiali</a>
             </div>
         </nav>
     </div>
 
     <h1>Lista delle Filiali</h1>
 <ul>
-    @foreach ($filiali as $filiale)
-        <li>
-            <a href="{{ route('filiali.show', $filiale->codice) }}">{{ $filiale->indirizzo }} - {{ $filiale->città }}</a>
-            
-        </li>
-    @endforeach
+   
 </ul>
 
 

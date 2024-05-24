@@ -11,7 +11,7 @@ class Filiale extends Model
     
     protected $fillable = ['indirizzo', 'città', 'cap'];
 
-    public function filiali()
+    public function automezzi()
     {
         return $this->hasMany(Automezzo::class, 'filiale_id', 'id');
     }

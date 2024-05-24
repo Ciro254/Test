@@ -1,4 +1,5 @@
 <h1>Lista delle Filiali</h1>
+
 <ul>
     @foreach ($filiali as $filiale)
         <li>
