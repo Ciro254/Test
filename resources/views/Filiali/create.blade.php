@@ -3,7 +3,7 @@
 @section('content')
     <h1>Aggiungi Nuova Filiale</h1>
 
-    <form action="{{ route('filiali.store') }}" method="POST">
+    <form action="{{route('filiali.store')}}" method="POST">
         @csrf
         <label for="indirizzo">Indirizzo:</label>
         <input type="text" name="indirizzo" required>

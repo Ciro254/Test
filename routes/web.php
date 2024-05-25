@@ -10,11 +10,15 @@ Route::get('/', function () {return view('welcome');});
 
 Route::get('/filiali', [FilialeController::class, 'index'])->name('filiali.index');
 Route::get('/filiali/{filiale}',[FilialeController::class, 'show'])->name('filiali.show');
-Route::get('/annuncio/crea',[FilialeController::class, 'create'])->name('filiali.create');
-Route::post('/book/salva', [FilialeController::class, 'store'])->name('filiali.store');
+Route::get('/filiali/crea',[FilialeController::class, 'create'])->name('filiali.create');
+Route::post('/filiali/salva', [FilialeController::class, 'store'])->name('filiali.store');
+Route::delete('/filiali/{filiale}', [FilialeController::class, 'destroy'])->name('filiali.destroy');
 
 
 // Route Automezzi //
 
 Route::get('/automezzi', [AutomezzoController::class, 'index'])->name('automezzi.index');
 Route::get('/automezzi/{automezzo}',[AutomezzoController::class, 'show'])->name('automezzi.show');
+Route::get('/automezzi/crea',[AutomezzoController::class, 'create'])->name('automezzi.create');
+Route::post('/automezzi/salva', [AutomezzoController::class, 'store'])->name('automezzi.store');
+Route::delete('/automezzi/{filiale}', [AutomezzoController::class, 'destroy'])->name('automezzi.destroy');
