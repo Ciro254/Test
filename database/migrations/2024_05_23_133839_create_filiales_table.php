@@ -11,12 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('automezzi', function (Blueprint $table) {
+        Schema::create('filiales', function (Blueprint $table) {
             $table->id();
-            $table->string('targa')->unique();
-            $table->string('marca');
-            $table->string('modello');
-            $table->unsignedBigInteger('filiale_id');
+            $table->string('indirizzo');
+            $table->string('città');
+            $table->string('cap');
             $table->timestamps();
         });
     }
@@ -26,7 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('automezzi');
-
+        Schema::dropIfExists('filiales');
     }
 };
