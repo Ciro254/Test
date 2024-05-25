@@ -29,10 +29,10 @@ class AutomezzoController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'targa' => 'required|unique:automezzi',
+            'targa' => 'required|unique:automezzos',
             'marca' => 'required',
             'modello' => 'required',
-            'filiale_id' => 'required|exists:filiali,codice',
+            'filiale_id' => 'required|exists:filiales,id',
         ]);
 
         Automezzo::create($request->all());
