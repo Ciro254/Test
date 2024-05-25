@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('welcome')
 
 @section('content')
     <h1>Aggiungi Nuovo Automezzo</h1>
@@ -17,7 +17,7 @@
         <label for="filiale_id">Filiale:</label>
         <select name="filiale_id" required>
             @foreach ($filiali as $filiale)
-                <option value="{{ $filiale->codice }}">{{ $filiale->indirizzo }} - {{ $filiale->città }}</option>
+                <option value="{{ $filiale->id }}">{{ $filiale->indirizzo }} - {{ $filiale->città }}</option>
             @endforeach
         </select>
         <br>
