@@ -2,7 +2,7 @@
 
 @section('content')
     <h1>Lista degli Automezzi</h1>
-    <a href="{{route('automezzi.create')}}">Aggiungi nuovo Automezzo</a>
+    <a href="{{ route('automezzi.create') }}">Aggiungi nuovo Automezzo</a>
     <ul>
         @foreach ($automezzi as $automezzo)
             <li>
