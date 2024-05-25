@@ -10,6 +10,8 @@ Route::get('/', function () {return view('welcome');});
 
 Route::get('/filiali', [FilialeController::class, 'index'])->name('filiali.index');
 Route::get('/filiali/{filiale}',[FilialeController::class, 'show'])->name('filiali.show');
+Route::get('/annuncio/crea',[FilialeController::class, 'create'])->name('filiali.create');
+Route::post('/book/salva', [FilialeController::class, 'store'])->name('filiali.store');
 
 
 // Route Automezzi //

@@ -12,9 +12,8 @@ class FilialeController extends Controller
         return view('filiali.index', compact('filiali'));
     }
 
-    public function show($id)
+    public function show(Filiale $filiale)
     {
-        $filiale = Filiale::findOrFail($id);
         return view('filiali.show', compact('filiale'));
     }
 
