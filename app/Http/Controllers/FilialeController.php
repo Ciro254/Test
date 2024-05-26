@@ -45,7 +45,7 @@ class FilialeController extends Controller
 
     public function apiFiliale()
 {
-    $filiali = Filiale::all();
+    $filiali = Filiale::with('automezzi')->get();
     return response()->json($filiali);
 }
 }

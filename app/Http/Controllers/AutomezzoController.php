@@ -48,9 +48,4 @@ class AutomezzoController extends Controller
         return redirect()->route('automezzi.index')->with('success', 'Automezzo eliminato con successo.');
     }
 
-    public function apiAutomezzo()
-{
-    $automezzi = Automezzo::with('filiale')->get();
-    return response()->json($automezzi);
-}
 }
