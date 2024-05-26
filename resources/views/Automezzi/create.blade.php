@@ -5,15 +5,18 @@
 
     <form action="{{ route('automezzi.store') }}" method="POST">
         @csrf
-        <label for="targa">Targa:</label>
-        <input type="text" name="targa" required>
-        <br>
-        <label for="marca">Marca:</label>
-        <input type="text" name="marca" required>
-        <br>
-        <label for="modello">Modello:</label>
-        <input type="text" name="modello" required>
-        <br>
+        <div class="mb-3">
+            <label for="targa" class="form-label">Targa:</label>
+            <input type="text" id="targa" class="form-control" name="targa" required>
+          </div>
+          <div class="mb-3">
+            <label for="marca:" class="form-label">Marca:</label>
+            <input type="text" id="marca" class="form-control" name="marca" required>
+          </div>
+          <div class="mb-3">
+            <label for="modello" class="form-label">Modello:</label>
+            <input type="text" id="modello" class="form-control" name="modello" required>
+          </div>
         <label for="filiale_id">Filiale:</label>
         <select name="filiale_id" required>
             @foreach ($filiali as $filiale)
@@ -21,6 +24,7 @@
             @endforeach
         </select>
         <br>
-        <button type="submit">Salva</button>
+        <button type="submit" class="btn btn-primary">Salva</button>
     </form>
 @endsection
+
