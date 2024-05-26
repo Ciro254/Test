@@ -6,7 +6,7 @@
     <ul class="list-group">
         @foreach ($filiali as $filiale)
             <li class="list-group-item">
-                <a href="{{ route('filiali.show', $filiale->id) }}">{{ $filiale->indirizzo }} - {{ $filiale->città }}</a>
+                <a href="{{ route('filiali.show', $filiale->id) }}">{{ $filiale->id }} - {{ $filiale->indirizzo }} - {{ $filiale->città }}</a>
                 <form action="{{ route('filiali.destroy', $filiale->id) }}" method="POST" style="display:inline-block">
                     @csrf
                     @method('DELETE')

@@ -6,7 +6,7 @@
     <ul class="list-group">
         @foreach ($automezzi as $automezzo)
             <li class="list-group-item">
-                <a href="{{route('automezzi.show', $automezzo->id) }}">{{$automezzo->targa}} - {{$automezzo->marca}}</a>
+                <a href="{{route('automezzi.show', $automezzo->id) }}">{{$automezzo->id}} - {{$automezzo->targa}} - {{$automezzo->marca}}</a>
                 <form action="{{route('automezzi.destroy', $automezzo->id)}}" method="POST" style="display:inline-block">
                     @csrf
                     @method('DELETE')

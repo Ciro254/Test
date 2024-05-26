@@ -2,6 +2,7 @@
 
 @section('content')
     <h1>Dettagli Automezzo</h1>
+    <p>Codice Automezzo: {{ $automezzo->id }}</p>
     <p>Targa: {{ $automezzo->targa }}</p>
     <p>Marca: {{ $automezzo->marca }}</p>
     <p>Modello: {{ $automezzo->modello }}</p>
