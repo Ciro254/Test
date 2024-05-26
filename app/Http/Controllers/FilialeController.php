@@ -42,4 +42,10 @@ class FilialeController extends Controller
 
         return redirect()->route('filiali.index')->with('success', 'Filiale eliminata con successo.');
     }
+
+    public function apiFiliale()
+{
+    $filiali = Filiale::all();
+    return response()->json($filiali);
+}
 }
